@@ -6,8 +6,10 @@ import HomeHero from '../sections/HomeHero';
 import About from '../sections/About';
 import Skills from '../sections/Skills';
 import Projects from '../sections/Projects';
+import FeaturedProject from '../sections/FeaturedProject';
 import Experience from '../sections/Experience';
 import EducationCertifications from '../sections/EducationCertifications';
+import LearningReflection from '../sections/LearningReflection';
 import Contact from '../sections/Contact';
 // components
 import Footer from '../components/Footer';
@@ -32,10 +34,13 @@ export default function Home() {
       <Skills />
       {/* Projects Section  */}
       <Projects />
+      <FeaturedProject />
       {/* Experience Section  */}
       <Experience />
-      {/* Education & Certifications Section */}
+      {/* Education & Certifications Section  */}
       <EducationCertifications />
+      {/* Learning Reflection */}
+      <LearningReflection />
       {/* Contact Section  */}
       <Contact />
       {/* Footer */}

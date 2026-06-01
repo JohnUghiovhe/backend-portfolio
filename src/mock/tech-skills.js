@@ -13,10 +13,9 @@ export const SKILL_GROUPS = [
     label: 'Backend & Frameworks',
     accent: '#00b4ff',
     skills: [
-      { label: 'Node.js',    icon: 'vscode-icons:file-type-node' },
+      { label: 'Node.js', icon: 'vscode-icons:file-type-node' },
       { label: 'Express.js', icon: 'simple-icons:express' },
-      { label: 'NestJS',     icon: 'logos:nestjs' },
-      ,
+      { label: 'NestJS', icon: 'logos:nestjs' }
     ],
   },
   {
@@ -113,7 +112,7 @@ export const BACKEND_SKILLS = [
     iconClasses: 'text-3xl',
   },
   {
-    label: 'REST Api',
+    label: 'REST APIs',
     icon: 'dashicons:rest-api',
     iconClasses: 'text-3xl',
   },
@@ -133,7 +132,7 @@ export const BACKEND_SKILLS = [
     iconClasses: 'text-2xl',
   },
   {
-    label: 'Mongodb',
+    label: 'MongoDB',
     icon: 'vscode-icons:file-type-mongo',
     iconClasses: 'text-3xl',
   },
@@ -146,6 +145,41 @@ export const BACKEND_SKILLS = [
     label: 'Socket.io',
     icon: 'logos:socket-io',
     iconClasses: 'text-3xl',
+  },
+  {
+    label: 'API Design',
+    icon: null,
+    iconClasses: 'text-2xl',
+  },
+  {
+    label: 'Authentication',
+    icon: 'logos:jwt',
+    iconClasses: 'text-2xl',
+  },
+  {
+    label: 'Background Jobs & Queues',
+    icon: null,
+    iconClasses: 'text-2xl',
+  },
+  {
+    label: 'Testing & CI',
+    icon: 'logos:jest',
+    iconClasses: 'text-2xl',
+  },
+  {
+    label: 'Logging & Observability',
+    icon: null,
+    iconClasses: 'text-2xl',
+  },
+  {
+    label: 'Caching',
+    icon: 'logos:redis',
+    iconClasses: 'text-2xl',
+  },
+  {
+    label: 'Deployment',
+    icon: 'logos:docker-icon',
+    iconClasses: 'text-2xl',
   },
 ];
 

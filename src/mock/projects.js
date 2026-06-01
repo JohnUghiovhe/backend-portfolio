@@ -46,6 +46,13 @@ export const PROJECTS = [
       'Insighta Labs+ is a TypeScript/Express backend that powers a profile intelligence platform across both web and CLI interfaces. It provides secure GitHub OAuth (PKCE) authentication, role-based API access, deterministic natural-language search, and a unified token model, ensuring consistent behavior, security, and data integrity regardless of how the system is accessed.'
     ],
     repoLink: 'https://github.com/JohnUghiovhe/insighta-backend',
+    techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Redis'],
+    contributions: [
+      'Designed and implemented the REST API surface and authentication flow (GitHub OAuth, PKCE).',
+      'Built deterministic search and ranking logic used by both web and CLI clients.',
+      'Implemented role-based authorization and token model to secure multi-interface access.'
+    ],
+    proof: { repo: 'https://github.com/JohnUghiovhe/insighta-backend' },
     category: [PROJECT_CATEGORY.BACKEND],
   },
   {
@@ -59,6 +66,12 @@ export const PROJECTS = [
       'A Node.js library for handling reliable API request retrying with configurable backoff strategies and circuit breaker patterns.',
     ],
     repoLink: 'https://github.com/JohnUghiovhe/retry-engine',
+    techStack: ['TypeScript', 'Node.js', 'SQLite'],
+    contributions: [
+      'Authored the retry strategies and circuit-breaker logic with configurable backoff.',
+      'Wrote unit tests and provided examples for integrating with Fetch and Axios clients.'
+    ],
+    proof: { repo: 'https://github.com/JohnUghiovhe/retry-engine', npm: '' },
     category: [PROJECT_CATEGORY.BACKEND],
   },
   {
@@ -76,6 +89,24 @@ export const PROJECTS = [
       'A full-stack invoice management system built with a backend-first architecture, supporting structured invoice workflows (draft → pending → paid), server-side validation, and dual persistence (PostgreSQL with automatic schema bootstrap and JSON fallback for local/test isolation). Designed for reliability across environments, with clean API design, validation boundaries, and testable data flows.',
     ],
     repoLink: 'https://github.com/JohnUghiovhe/invoice-management-app',
+    techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Jest'],
+    contributions: [
+      'Defined the API specification and request/response contracts.',
+      'Implemented workflow engine transitions and server-side validation rules.',
+      'Wrote integration tests and created the automatic DB bootstrap for PostgreSQL.'
+    ],
+    proof: { repo: 'https://github.com/JohnUghiovhe/invoice-management-app', demo: '' },
+    featured: true,
+    deepDive: {
+      problem: 'Teams needed a reliable way to manage invoices across states with consistent validation and auditability, avoiding data drift between environments.',
+      architecture: 'Backend-driven API with PostgreSQL for primary persistence, JSON fallback for local tests, and a lightweight workflow engine handling state transitions. Services expose REST endpoints; job scheduler handles background tasks (email, invoice reconciliation).',
+      keyEndpoints: [
+        'POST /api/invoices - create invoice with validation',
+        'GET /api/invoices/:id - retrieve invoice and history',
+        'POST /api/invoices/:id/transition - move invoice through workflow (draft→pending→paid)'
+      ],
+      challenge: 'Ensuring idempotent state transitions and reliable background reconciliation across environments. Solved by introducing transition guards, optimistic row-level locking in Postgres, and a background job queue with retry logic.'
+    },
     category: [PROJECT_CATEGORY.BACKEND],
   },
 ];

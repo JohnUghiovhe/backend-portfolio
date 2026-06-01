@@ -10,7 +10,7 @@ import { PROJECTS, PROJECT_CATEGORY, TABS } from '../mock/projects';
 // ----------------------------------------------------------------------
 
 export default function Works() {
-  const [currentTab, setCurrentTab] = useState('all');
+  const [currentTab, setCurrentTab] = useState(PROJECT_CATEGORY.BACKEND);
   const [showAllProjects, setShowAllProjects] = useState(false);
 
   const activeClass =
