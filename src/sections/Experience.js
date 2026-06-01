@@ -20,22 +20,6 @@ const EXPERIENCES = [
       'Designed modular backend systems with clear separation between routing, validation, business logic, persistence, and error handling to improve maintainability and scalability across projects.'
     ],
   },
-
-  {    role: 'Backend Developer (Intern)',
-    company: 'AltSchool Africa',
-    period: 'September 2025 – February 2026',
-    location: 'Remote',
-    highlights: [
-      'Built Eventful, a full-stack event ticketing and management platform that streamlined event creation, ticket checkout, and attendee workflows, replacing manual coordination processes with a scalable digital system.',
-      'Designed modular REST APIs using Node.js, TypeScript, and Express, and integrated Redis caching to improve response performance and support long-term scalability across backend services.',
-      'Developed a real-time multiplayer game system using WebSockets and Socket.IO, implementing low-latency bidirectional communication, event-driven game logic, timers, scoring systems, and concurrent user interactions.',
-      'Built a chat-based food ordering platform using NestJS and TypeScript, implementing modular APIs, session-driven workflows, and payment verification flows to improve user accessibility and transaction handling.',
-      'Designed backend systems supporting authentication, access control, relational data modeling, and payment integrations, strengthening experience with production-style application architecture.',
-      'Developed a content publishing backend with role-based access controls and reusable RESTful API structures for protected and public content operations.',
-      'Applied modern backend engineering practices including modular architecture, API design, validation, persistence design, and scalable system organization across multiple projects.'
-    ],
-  },
-
 ];
 
 // ----------------------------------------------------------------------

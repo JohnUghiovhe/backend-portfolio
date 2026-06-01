@@ -9,7 +9,6 @@ export const SKILL_GROUPS = [
       { label: 'Express', icon: 'simple-icons:express' },
       { label: 'PostgreSQL', icon: 'vscode-icons:file-type-pgsql' },
       { label: 'SQLite', icon: 'vscode-icons:file-type-sqlite' },
-      { label: 'Redis', icon: 'logos:redis' },
     ],
   },
   {

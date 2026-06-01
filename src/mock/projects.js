@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     imgSrc: 'https://res.cloudinary.com/djd7bdpdm/image/upload/v1777813377/Insighta_Labs_Web_fxcglg.png',
     title: 'Insighta Labs+',
-    techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Redis'],
+    techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL'],
     description: [
       'Insighta Labs+ is a TypeScript/Express backend that powers a profile intelligence platform across web and CLI interfaces. It provides secure GitHub OAuth (PKCE) authentication, role-based API access, deterministic natural-language search, and a unified token model.'
     ],
@@ -10,13 +10,13 @@ export const PROJECTS = [
     contributions: [
       'Designed the API surface, authentication flow, and access control for both web and CLI clients.',
       'Built deterministic search and ranking logic for profile data.',
-      'Implemented token handling, request logging, and route-scoped rate limiting.'
+      'Implemented token handling, short-lived in-memory caching for hot lookups, request logging, and route-scoped rate limiting.'
     ],
     proof: { repo: 'https://github.com/JohnUghiovhe/insighta-backend' },
     featured: true,
     deepDive: {
       problem: 'The product needed one backend that could serve both web and CLI clients without duplicating authentication, search, or authorization logic.',
-      architecture: 'A TypeScript/Express API backed by PostgreSQL, with middleware for authentication, authorization, logging, and rate limiting. Search and token workflows are handled in service modules so clients share the same rules.',
+      architecture: 'A TypeScript/Express API backed by PostgreSQL, with middleware for authentication, authorization, logging, and rate limiting. Search and token workflows are handled in service modules so clients share the same rules. Short-lived data is cached in-process (memory cache) for performance; Redis was not used in this implementation.',
       keyEndpoints: [
         'POST /auth/github - start GitHub OAuth (PKCE)',
         'GET /profile/search - search profile data deterministically',
@@ -26,6 +26,7 @@ export const PROJECTS = [
     },
   },
   {
+    imgSrc: 'https://res.cloudinary.com/djd7bdpdm/image/upload/v1780355490/request-detail_xftryp.png',
     title: 'Retry Engine - A Node.js Library for Reliable API Request Retrying',
     techStack: ['TypeScript', 'Node.js', 'SQLite'],
     description: [
