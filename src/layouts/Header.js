@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 // context
 import { ScrollContext } from '../context/ScrollContext';
-import { cvLink } from '../mock/profile';
 
 // ----------------------------------------------------------------------
 
@@ -12,11 +11,11 @@ export default function Header() {
 
   const navItems = [
     { label: 'Home', href: '#' },
-    { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
     {label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Education', href: '#education' },
+    { label: 'Featured', href: '#featured' },
+    { label: 'Reflection', href: '#reflection' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -89,15 +88,6 @@ export default function Header() {
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.45, delay: 0.1 }}
         >
-          <a
-            href={cvLink}
-            download="John-Ughiovhe-CV.pdf"
-            type="application/pdf"
-            className="rounded-xl bg-linear-to-r from-[#6fa1ecdd] to-[#0240b3] px-6 py-2 text-sm font-bold text-white shadow-lg shadow-[#2b1424] transition hover:brightness-110"
-          >
-            Resume
-          </a>
-
           <button
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#66e0ff]/30 bg-[#091322]/80 text-[#d5deee] transition hover:border-[#66e0ff] hover:text-[#66e0ff] md:hidden"

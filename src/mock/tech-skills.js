@@ -1,185 +1,40 @@
 export const SKILL_GROUPS = [
   {
-    id: 'Languages',
-    label: 'Languages',
-    accent: '#ffd166',
-    skills: [
-      { label: 'JavaScript', icon: 'logos:javascript' },
-      { label: 'TypeScript', icon: 'logos:typescript-icon' },
-    ],
-  },
-  {
-    id: 'backend',
-    label: 'Backend & Frameworks',
+    id: 'core',
+    label: 'Core Stack',
     accent: '#00b4ff',
     skills: [
+      { label: 'TypeScript', icon: 'logos:typescript-icon' },
       { label: 'Node.js', icon: 'vscode-icons:file-type-node' },
-      { label: 'Express.js', icon: 'simple-icons:express' },
-      { label: 'NestJS', icon: 'logos:nestjs' }
+      { label: 'Express', icon: 'simple-icons:express' },
+      { label: 'PostgreSQL', icon: 'vscode-icons:file-type-pgsql' },
+      { label: 'SQLite', icon: 'vscode-icons:file-type-sqlite' },
+      { label: 'Redis', icon: 'logos:redis' },
     ],
   },
   {
-    id: 'databases',
-    label: 'Databases & ORMs',
-    accent: '#c400ff',
+    id: 'delivery',
+    label: 'Delivery & Reliability',
+    accent: '#1a5fff',
     skills: [
-      { label: 'MongoDB',    icon: 'vscode-icons:file-type-mongo' },
-      { label: 'PostgreSQL', icon: 'vscode-icons:file-type-pgsql' },
-      { label: 'TypeORM',    icon: 'logos:typeorm' },
-      { label: 'SQLite',     icon: 'vscode-icons:file-type-sqlite' },
+      { label: 'REST APIs', icon: 'dashicons:rest-api' },
+      { label: 'Authentication', icon: 'logos:jwt' },
+      { label: 'Rate Limiting', icon: null },
+      { label: 'Background Jobs', icon: null },
+      { label: 'Queues', icon: null },
+      { label: 'Logging', icon: null },
+      { label: 'Testing', icon: 'logos:jest' },
+      { label: 'Validation', icon: null },
+      { label: 'Circuit Breakers', icon: null },
     ],
   },
   {
     id: 'tools',
-    label: 'Tools & Development',
-    accent: '#1a5fff',
-    skills: [
-      { label: 'Git',        icon: 'logos:git' },
-      { label: 'Jest',       icon: 'logos:jest' },
-      { label: 'Docker',     icon: 'logos:docker-icon' },
-      { label: 'Postman',    icon: 'logos:postman-icon' },
-      { label: 'Swagger',    icon: 'logos:swagger' },
-      { label: 'Redis',      icon: 'logos:redis' },
-    ],
-  },
-  {
-    id: 'other',
-    label: 'Other Skills',
+    label: 'Workflow',
     accent: '#00d4a6',
     skills: [
-      { label: 'REST APIs',  icon: 'dashicons:rest-api' },
-      { label: 'Authentication (JWT)',  icon: 'logos:jwt' },
-      { label: 'WebSockets',            icon: 'logos:socket-io' },
-      { label: 'Backend MVC Architecture',  icon: null },
-      { label: 'Scalable Systems',      icon: null },
+      { label: 'Git', icon: 'logos:git' },
     ],
-  },
-];
-
-// Legacy exports kept for reference
-export const FRONTEND_SKILLS = [
-  {
-    label: 'HTML',
-    icon: 'vscode-icons:file-type-html',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'CSS',
-    icon: 'vscode-icons:file-type-css',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'Javascript',
-    icon: 'logos:javascript',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Typescript',
-    icon: 'logos:typescript-icon',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'React.js',
-    icon: 'vscode-icons:file-type-reactjs',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Next.js',
-    icon: 'cib:next-js',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'Tailwind CSS',
-    icon: 'logos:tailwindcss-icon',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Vite.js',
-    icon: 'logos:vitejs',
-    iconClasses: 'text-3xl',
-  },
-];
-
-export const BACKEND_SKILLS = [
-  {
-    label: 'Node.js',
-    icon: 'vscode-icons:file-type-node',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'Express (Node.js Framework)',
-    icon: 'simple-icons:express',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'REST APIs',
-    icon: 'dashicons:rest-api',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'NestJS (Node.js Framework)',
-    icon: 'logos:nestjs',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'PostgreSQL',
-    icon: 'vscode-icons:file-type-pgsql',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'Swagger',
-    icon: 'logos:swagger',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'MongoDB',
-    icon: 'vscode-icons:file-type-mongo',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'Redis',
-    icon: 'logos:redis',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Socket.io',
-    icon: 'logos:socket-io',
-    iconClasses: 'text-3xl',
-  },
-  {
-    label: 'API Design',
-    icon: null,
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Authentication',
-    icon: 'logos:jwt',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Background Jobs & Queues',
-    icon: null,
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Testing & CI',
-    icon: 'logos:jest',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Logging & Observability',
-    icon: null,
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Caching',
-    icon: 'logos:redis',
-    iconClasses: 'text-2xl',
-  },
-  {
-    label: 'Deployment',
-    icon: 'logos:docker-icon',
-    iconClasses: 'text-2xl',
   },
 ];
 

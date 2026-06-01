@@ -4,8 +4,12 @@ import Iconify from '../Iconify';
 
 // ----------------------------------------------------------------------
 
-export default function ProjectCard({ imgSrc, title, description, repoLink, sourceLink, techIcons }) {
+export default function ProjectCard({ imgSrc, title, description, repoLink, sourceLink, techStack, contributions, proof }) {
   const impactPoints = Array.isArray(description) ? description : [description];
+  const stackItems = Array.isArray(techStack) ? techStack : [];
+  const contributionItems = Array.isArray(contributions) ? contributions : [];
+  const repoHref = proof?.repo || repoLink || '';
+  const demoHref = proof?.demo || sourceLink || '';
 
   return (
     <div className="flex h-full min-h-124 w-full max-w-xs flex-col rounded-lg border border-gray-200 shadow-md dark:border-gray-700 dark:bg-[#132f4c]/70">
@@ -15,7 +19,7 @@ export default function ProjectCard({ imgSrc, title, description, repoLink, sour
         <h1 className="mb-2 text-lg font-semibold  text-gray-900 dark:text-white">{title}</h1>
         <div className="mb-3">
           <p className="mb-2 text-[11px] font-bold tracking-widest text-primary-600 dark:text-primary-300">
-            IMPACT
+            OVERVIEW
           </p>
           <ul className="space-y-2">
             {impactPoints.filter(Boolean).map((point, index) => (
@@ -30,20 +34,38 @@ export default function ProjectCard({ imgSrc, title, description, repoLink, sour
           </ul>
         </div>
 
-        {techIcons && techIcons.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-5">
-            {techIcons.filter(Boolean).map(({ icon }, i) => (
-              <Iconify key={`icon-${i}`} classes="text-2xl opacity-80" icon={icon} />
+        {contributionItems.length > 0 && (
+          <div className="mt-4">
+            <p className="mb-2 text-[11px] font-bold tracking-widest text-primary-600 dark:text-primary-300">
+              WHAT I BUILT
+            </p>
+            <ul className="space-y-2">
+              {contributionItems.map((point, index) => (
+                <li key={`contribution-${index}`} className="flex items-start gap-2 text-sm font-normal text-gray-700 dark:text-gray-400">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-600 dark:bg-primary-300" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {stackItems.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {stackItems.map((item) => (
+              <span key={item} className="rounded-full border border-gray-700/50 bg-[#131e36]/80 px-3 py-1 text-xs font-medium text-neutral-200">
+                {item}
+              </span>
             ))}
           </div>
         )}
 
-        {(sourceLink !== '' || repoLink !== '') && (
+        {(demoHref !== '' || repoHref !== '') && (
           <div className="mt-auto pt-5">
             <div className="flex items-center justify-end space-x-6 border-t border-gray-200 pt-4 dark:border-gray-700">
-              {repoLink !== '' && (
+              {repoHref !== '' && (
                 <a
-                  href={repoLink}
+                  href={repoHref}
                   target="_blank"
                   rel="noreferrer"
                   className="group flex flex-col items-center space-y-1 transition-all duration-200"
@@ -56,9 +78,9 @@ export default function ProjectCard({ imgSrc, title, description, repoLink, sour
                   <span className="text-[10px] font-medium text-gray-600 dark:text-gray-400">View Repo</span>
                 </a>
               )}
-              {sourceLink !== '' && (
+              {demoHref !== '' && (
                 <a
-                  href={sourceLink}
+                  href={demoHref}
                   target="_blank"
                   rel="noreferrer"
                   className="group flex flex-col items-center space-y-1 transition-all duration-200"
@@ -87,5 +109,10 @@ ProjectCard.propTypes = {
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   repoLink: PropTypes.string,
   sourceLink: PropTypes.string,
-  techIcons: PropTypes.array,
+  techStack: PropTypes.array,
+  contributions: PropTypes.array,
+  proof: PropTypes.shape({
+    repo: PropTypes.string,
+    demo: PropTypes.string,
+  }),
 };
