@@ -10,7 +10,7 @@ import { contactEmail, FOOTER_SOCIAL_LINKS } from '../mock/profile';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative container mx-auto mt-12 px-5 py-12">
+    <section id="contact" className="relative container mx-auto mt-12 px-4 py-12 sm:px-6 lg:px-8">
       <HeadingAnimate>
         <h2 className="mb-12 text-center font-lato text-3xl font-semibold text-primary-700 dark:text-primary-300 sm:text-4xl">
           Contact
@@ -18,7 +18,7 @@ export default function Contact() {
       </HeadingAnimate>
 
       <LoadAnimate amount={0}>
-        <div className="mx-auto max-w-3xl rounded-lg border border-gray-200 bg-gray-50/50 p-8 dark:border-gray-700 dark:bg-[#132f4c]/50">
+        <div className="mx-auto max-w-3xl rounded-lg border border-gray-200 bg-gray-50/50 p-6 sm:p-8 dark:border-gray-700 dark:bg-[#132f4c]/50">
           <div>
             <h3 className="mb-3 font-lato text-2xl font-semibold text-gray-900 dark:text-white">
               Let's Connect
@@ -30,7 +30,7 @@ export default function Contact() {
             {/* Contact Details */}
             <div className="space-y-6">
               {/* Email */}
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-700/10 dark:bg-primary-500/20">
                   <Iconify
                     classes="text-xl text-primary-700 dark:text-primary-300"
@@ -51,7 +51,7 @@ export default function Contact() {
               </div>
 
               {/* Location */}
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-700/10 dark:bg-primary-500/20">
                   <Iconify
                     classes="text-xl text-primary-700 dark:text-primary-300"
@@ -74,7 +74,7 @@ export default function Contact() {
               <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400">
                 Follow me
               </p>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 {FOOTER_SOCIAL_LINKS.slice(0, 3).map(({ icon, link }, index) => (
                   <a
                     key={`contact-social-${index}`}
