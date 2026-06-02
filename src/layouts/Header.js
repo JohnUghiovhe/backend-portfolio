@@ -43,26 +43,26 @@ export default function Header() {
   return (
     <header className="relative w-full max-w-none">
       <nav
-        className={`neon-border-bottom fixed top-0 right-0 z-1000 flex h-16 w-full items-center overflow-hidden px-4 md:px-[4%] ${isScroll ? 'bg-[#0b1220]/88 backdrop-blur-xl' : 'bg-[#0b1220]/72 backdrop-blur-md'
+        className={`neon-border-bottom fixed top-0 right-0 z-1000 flex h-16 w-full items-center overflow-hidden px-4 lg:px-[4%] ${isScroll ? 'bg-[#0b1220]/88 backdrop-blur-xl' : 'bg-[#0b1220]/72 backdrop-blur-md'
           }`}
       >
         {/* Navy blue ambient glow behind nav content */}
         <div className="neon-section-ambient pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_100%,rgba(15,40,130,0.35),transparent_70%)]" />
         <motion.div
-          className="w-1/2 md:w-1/4"
+          className="w-1/2 lg:w-1/4"
           initial={{ opacity: 0, scale: 0.97, x: -24 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.45, delay: 0 }}
         >
           <h3
-            className="text-md cursor-pointer bg-linear-to-r from-[#d5deee] to-[#0eaddd] bg-clip-text font-lato font-black tracking-widest text-transparent md:text-2xl"
+            className="text-md cursor-pointer bg-linear-to-r from-[#d5deee] to-[#0eaddd] bg-clip-text font-lato font-black tracking-widest text-transparent lg:text-2xl"
             onClick={jumpToTop}
           >
             &lt;JU/&gt;
           </h3>
         </motion.div>
         <motion.div
-          className="hidden w-2/4 justify-center md:flex"
+          className="hidden w-2/4 justify-center lg:flex"
           initial={{ opacity: 0, scale: 0.98, x: 24 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.45, delay: 0.05 }}
@@ -82,14 +82,14 @@ export default function Header() {
         </motion.div>
 
         <motion.div
-          className="flex w-1/2 items-center justify-end gap-3 md:w-1/4"
+          className="flex w-1/2 items-center justify-end gap-3 lg:w-1/4"
           initial={{ opacity: 0, scale: 0.98, x: 24 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.45, delay: 0.1 }}
         >
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#66e0ff]/30 bg-[#091322]/80 text-[#d5deee] transition hover:border-[#66e0ff] hover:text-[#66e0ff] md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#66e0ff]/30 bg-[#091322]/80 text-[#d5deee] transition hover:border-[#66e0ff] hover:text-[#66e0ff] lg:hidden"
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-navigation"
@@ -111,7 +111,7 @@ export default function Header() {
       </nav>
 
       <div
-        className={`fixed inset-0 top-16 z-50 bg-[#020817]/72 backdrop-blur-sm transition duration-300 md:hidden ${isMobileMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'}`}
+        className={`fixed inset-0 top-16 z-50 bg-[#020817]/72 backdrop-blur-sm transition duration-300 lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'}`}
         onClick={() => setIsMobileMenuOpen(false)}
         aria-hidden={!isMobileMenuOpen}
       >

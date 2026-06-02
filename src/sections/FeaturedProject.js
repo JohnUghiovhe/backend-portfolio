@@ -11,22 +11,22 @@ export default function FeaturedProject() {
   const { title, imgSrc, deepDive = {}, techStack = [], contributions = [], proof = {} } = featured;
 
   return (
-    <section id="featured" className="relative container mx-auto mt-16 pb-16">
+    <section id="featured" className="relative container mx-auto mt-16 px-4 pb-16 sm:px-6 lg:px-8">
       <HeadingAnimate>
         <h2 className="mb-10 text-center font-lato text-3xl font-bold text-primary-700 dark:text-primary-300 sm:text-4xl">Featured Project</h2>
       </HeadingAnimate>
 
       <LoadAnimate amount={0}>
-        <div className="mx-auto max-w-4xl rounded-lg border border-gray-700/40 bg-[#0b1220]/60 p-6">
-          <div className="grid gap-6 md:grid-cols-3">
+        <div className="mx-auto max-w-5xl rounded-lg border border-gray-700/40 bg-[#0b1220]/60 p-5 sm:p-6">
+          <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_1.4fr]">
             {imgSrc && (
-              <div className="col-span-1">
-                <img src={imgSrc} alt={title} className="rounded-md object-cover" />
+              <div className="overflow-hidden rounded-md">
+                <img src={imgSrc} alt={title} className="h-full w-full object-cover" />
               </div>
             )}
 
-            <div className="col-span-2">
-              <h3 className="text-2xl font-bold text-neutral-100">{title}</h3>
+            <div className="min-w-0">
+              <h3 className="text-xl font-bold text-neutral-100 sm:text-2xl">{title}</h3>
 
               {deepDive.problem && (
                 <div className="mt-4">

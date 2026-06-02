@@ -10,7 +10,7 @@ import { PROJECTS } from '../mock/projects';
 
 export default function Works() {
   return (
-    <section id="projects" className="relative container mx-auto mt-16 space-y-10 pb-16 scroll-mt-24">
+    <section id="projects" className="relative container mx-auto mt-16 space-y-10 px-4 pb-16 scroll-mt-24 sm:px-6 lg:px-8">
       <HeadingAnimate>
         <h2 className="mb-10 text-center font-lato text-3xl font-bold text-primary-700 dark:text-primary-300 sm:text-4xl">
           Projects
