@@ -45,7 +45,7 @@ export const PROJECTS = [
     title: 'Invoice Workflow Engine',
     techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL'],
     description: [
-      'A full-stack invoice management system built with a backend-first architecture, supporting structured invoice workflows (draft → pending → paid), server-side validation, and dual persistence (PostgreSQL with automatic schema bootstrap and JSON fallback for local/test isolation). Designed for reliability across environments, with clean API design, validation boundaries, and testable data flows.',
+      'A system built with a backend-first architecture, supporting structured invoice workflows (draft → pending → paid), server-side validation, and dual persistence (PostgreSQL with automatic schema bootstrap and JSON fallback for local/test isolation). Designed for reliability across environments, with clean API design, validation boundaries, and testable data flows.',
     ],
     repoLink: 'https://github.com/JohnUghiovhe/invoice-management-app',
     contributions: [

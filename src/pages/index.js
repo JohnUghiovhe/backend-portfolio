@@ -6,7 +6,6 @@ import HomeHero from '../sections/HomeHero';
 import Skills from '../sections/Skills';
 import Projects from '../sections/Projects';
 import FeaturedProject from '../sections/FeaturedProject';
-import Experience from '../sections/Experience';
 import LearningReflection from '../sections/LearningReflection';
 import Contact from '../sections/Contact';
 // components
@@ -29,8 +28,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <FeaturedProject />
-      {/* Experience Section  */}
-      <Experience />
       <LearningReflection />
       <Contact />
       <Footer />

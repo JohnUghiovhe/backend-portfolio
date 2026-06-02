@@ -19,9 +19,9 @@ export default function LearningReflection() {
             Practically, I improved on: writing integration tests with Jest, designing idempotent endpoints and transition guards, using Postgres for transactional guarantees, and implementing background job retries for resiliency. These concrete skills let me ship backend features with confidence and measurable reliability.
           </p>
 
-          <p className="mt-4 font-medium">
-            My intent with this portfolio is to clearly show the backend problems I solved, the technical choices I made, and the code-level responsibilities I owned during HNG.
-          </p>
+              <p className="mt-4 font-medium">
+                My intent with this portfolio is to clearly show the backend problems I solved, the technical choices I made, and the code-level responsibilities I owned during HNG.
+              </p>
         </div>
       </LoadAnimate>
     </section>
